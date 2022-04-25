@@ -1,0 +1,39 @@
+/*class Passageiro{
+    constructor()
+String Nome;
+int CPF;
+int Idade;
+Passagem passagem; //composição
+	método cadastrarNovo() 
+	método editarDados()
+	método mostrarDados() //mostra os dados do passageiro
+	método mostrarDados(String nome,int CPF) //mostra os dados do passageiro
+}
+class Passagem {
+    constructor()
+String lugar;
+int cadeira;
+string lado; //janela? meio? etc
+Pagamento pagamento //composição
+método comprarPassagem()
+método trocarPassagem()
+método mostrarDados() /*@override método sobrescrito mostra os detalhes da passagem
+}*/
+
+/*Classe Pagamento extends  Passagem {
+double valor;
+int parcelas;
+	método PagarBoleto()
+	método PagarDébito()
+	método PagarCrédito()
+	método mostrarDados() /*@override método sobrescrito apresenta dados do pagamento
+}*/
+
+/*Classe lugar {
+String nome;
+String aeroporto;
+	método cadastroNovoLugar()
+	método editarLugar()
+	método inserirAlerta() // caso o país esteja vivenciando alguma situação atípica
+	método cadastrarAeroporto()
+	método mostrarDados() /*@override método sobrescrito Apresenta lugares cadastrados}*/
