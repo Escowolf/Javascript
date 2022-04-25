@@ -1,4 +1,4 @@
-# labII
+# JavaScript or ECMAscript
 
-# Desenvolvimento de software
-## Problemas simples
+## Desenvolvimento de software
+### Problemas simples
