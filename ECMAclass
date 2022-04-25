@@ -1,0 +1,71 @@
+class passagem {
+    constructor (cpf,nome,nTicket,bagagem){
+        this.cpf = cpf;
+        this.nome = nome;
+        this.nTicket = nTicket;
+        this.bagagem = bagagem;
+    }
+
+    enviarPorEmail(){
+        console.log("Dados enviados por e-mail "+"Nome:"+this.nome+" Nº passagem: "+this.nTicket+" Peso da bagagem:"+this.bagagem);
+    }
+
+    mostrarDados(){
+        console.log("O número da sua passagem é "+this.nTicket+".");
+    }
+}
+
+class executivo extends passagem{
+    constructor(cpf,nome,bagagem,bebida,alimentos){
+        super(cpf,nome,bagagem);
+        this.bebida = bebida;
+        this.alimentos = alimentos;
+        this.bagagem = bagagem;
+    }
+    
+    aumentarCapacidadeBagagem(){
+        return console.log("Sua bagagem tem o dobro da capacidade agora: "+this.bagagem*2+" Kg");
+    }
+
+    mostrarDados(){//sobrescrição
+        console.log("Nome: "+this.nome+" CPF: "+this.cpf+" Bagagem: "+this.bagagem+" Bebida: "+this.bebida+" Alimentação: "+this.alimentos);
+    }
+}
+
+class economica extends passagem{
+    constructor(cpf,nome,cadeira,x){
+        super(cpf,nome);
+        this.cadeira = cadeira;
+        this.x = x;
+    }
+
+    escalaVoo(x){
+        if(this.x == 0){
+            console.log("Seu voo não fará escalas!");
+        }
+        if (this.x == 1){
+            console.log("Seu voo fará 1 escala");
+        }else if (this.x <1){
+            console.log("Seu voo fará "+this.x+" escalas");
+        }
+        
+    }
+
+    mostrarDados(){//sobrescrição
+        console.log("Nome: "+this.nome+" CPF: "+this.cpf+" Cadeira: "+this.cadeira);
+    }
+}
+
+passagem_1 = new economica ("0123456789","Paula","B12",0);
+passagem_2 = new economica ("9876543210","Luis","C13",3);
+passagem_3 = new executivo ("1236458914","Joaquin",30,"Água de coco","Escolheu cardápio comum.");
+passagem_4 = new passagem("014056047042","Filipe Escobar",1547852,25+"Kg");
+
+passagem_1.mostrarDados();
+passagem_2.mostrarDados();
+passagem_3.mostrarDados();
+passagem_3.aumentarCapacidadeBagagem();
+passagem_4.enviarPorEmail();
+passagem_2.escalaVoo();
+passagem_1.escalaVoo();
+passagem_4.mostrarDados();
